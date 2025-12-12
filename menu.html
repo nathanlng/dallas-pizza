@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>La Carte Pizzéria Texas</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script defer src="script.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#f27f0d",
+              "background-light": "#f8f7f5",
+              "background-dark": "#221910",
+            },
+            fontFamily: {
+              display: ["Work Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased transition-colors duration-200"
+  >
+    <div
+      class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto shadow-2xl"
+    >
+      <div
+        class="sticky top-0 z-50 flex items-center bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm p-4 pb-2 justify-between border-b border-gray-200 dark:border-white/5"
+      >
+        <div
+          class="cursor-pointer text-slate-900 dark:text-white flex size-12 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+        >
+          <span class="material-symbols-outlined" onclick="history.back()"
+            >arrow_back</span
+          >
+        </div>
+        <h2
+          class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center uppercase"
+        >
+          The Saloon Menu
+        </h2>
+        <div class="flex w-12 items-center justify-end"></div>
+      </div>
+      <div
+        class="sticky top-[68px] z-40 bg-background-light dark:bg-background-dark py-3 pl-4 border-b border-gray-200 dark:border-white/5"
+      >
+        <div class="flex gap-3 overflow-x-auto no-scrollbar pr-4">
+          <button
+            class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-5 shadow-lg shadow-primary/20 transition-transform active:scale-95"
+          >
+            <span class="material-symbols-outlined text-white text-[18px]"
+              >local_fire_department</span
+            >
+            <p
+              class="text-white text-sm font-bold leading-normal whitespace-nowrap"
+            >
+              Sheriff's Specials
+            </p>
+          </button>
+          <button
+            class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#393028] border border-gray-200 dark:border-transparent px-5 hover:bg-gray-50 dark:hover:bg-[#4a3f35] transition-colors active:scale-95"
+          >
+            <span
+              class="material-symbols-outlined text-gray-500 dark:text-gray-400 text-[18px]"
+              >local_pizza</span
+            >
+            <p
+              class="text-slate-700 dark:text-gray-200 text-sm font-medium leading-normal whitespace-nowrap"
+            >
+              Texas BBQ Pizzas
+            </p>
+          </button>
+          <button
+            class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#393028] border border-gray-200 dark:border-transparent px-5 hover:bg-gray-50 dark:hover:bg-[#4a3f35] transition-colors active:scale-95"
+          >
+            <span
+              class="material-symbols-outlined text-gray-500 dark:text-gray-400 text-[18px]"
+              >rice_bowl</span
+            >
+            <p
+              class="text-slate-700 dark:text-gray-200 text-sm font-medium leading-normal whitespace-nowrap"
+            >
+              Spicy Desert Sides
+            </p>
+          </button>
+          <button
+            class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#393028] border border-gray-200 dark:border-transparent px-5 hover:bg-gray-50 dark:hover:bg-[#4a3f35] transition-colors active:scale-95"
+          >
+            <span
+              class="material-symbols-outlined text-gray-500 dark:text-gray-400 text-[18px]"
+              >local_bar</span
+            >
+            <p
+              class="text-slate-700 dark:text-gray-200 text-sm font-medium leading-normal whitespace-nowrap"
+            >
+              Saloon Drinks
+            </p>
+          </button>
+        </div>
+      </div>
+      <div class="flex-1 pb-6" id="section-1">
+        <div class="pt-6">
+          <div class="flex items-center justify-between px-4 pb-4">
+            <h2
+              class="text-slate-900 dark:text-white tracking-tight text-2xl font-bold leading-tight flex items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-primary">stars</span>
+              Sheriff's Specials
+            </h2>
+          </div>
+          <div
+            class="group mx-4 mb-4 overflow-hidden rounded-xl bg-white dark:bg-[#2c2219] shadow-sm border border-gray-100 dark:border-white/5"
+          >
+            <div class="flex gap-4 p-3 items-center">
+              <div
+                class="bg-center bg-no-repeat bg-cover rounded-lg size-[88px] shrink-0 shadow-inner"
+                data-alt="Close up of a delicious BBQ pizza with cheese"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBJNbwK_7_Gxo6aRgmfx7PWhl_5P08n7uRnmFXqIHEb1dEVtWa178E7iPkgSSCRe3ptS7F65d-S_q2LiADCIahMamW_AN-9wwHDJsoq_ZJaQwWT0E_MhcM5A2NVt13s740eCgIRXmEcDGd8AsxD67rAYONRpfPlDv-Ni-z6mSpuEkyhLBVVDfjiFpqS3cgGFADxEhkd6pthqWH4h9OEgI42rCZdRCeWa1ihrgjVZF2iIBcsBMsptENvxuh0CRsG9H5N3bwpTsMuvYU');
+                "
+              ></div>
+              <div class="flex flex-1 flex-col justify-between py-1">
+                <div>
+                  <div class="flex justify-between items-start">
+                    <p
+                      class="text-slate-900 dark:text-white text-lg font-bold leading-tight"
+                    >
+                      The Lone Star BBQ
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-1 mt-1">
+                    <span
+                      class="material-symbols-outlined text-primary text-[14px]"
+                      >local_fire_department</span
+                    >
+                    <p
+                      class="text-primary text-xs font-bold uppercase tracking-wide"
+                    >
+                      Spicy
+                    </p>
+                  </div>
+                  <p
+                    class="text-slate-500 dark:text-[#baab9c] text-sm font-normal leading-snug mt-1 line-clamp-2"
+                  >
+                    Grilled chicken, tangy BBQ sauce, red onions, cheddar,
+                    cilantro.
+                  </p>
+                </div>
+              </div>
+              <div class="pl-4">
+                <span class="text-lg font-bold text-slate-900 dark:text-white"
+                  >$16.50</span
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="group mx-4 mb-4 overflow-hidden rounded-xl bg-white dark:bg-[#2c2219] shadow-sm border border-gray-100 dark:border-white/5"
+          >
+            <div class="flex gap-4 p-3 items-center">
+              <div
+                class="bg-center bg-no-repeat bg-cover rounded-lg size-[88px] shrink-0 shadow-inner"
+                data-alt="Spicy pizza with jalapenos"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCVqk8O7GCoEF-OgPXHboGH3B-JoCNfKQgX-EoCAzftbAldUq07Yi4nzGddjREscce_GPaGYJQqA_AQMpAUYkC3KXmFxnuE94cMGMroepK0IrhdUxBWdXBQmnvG9GLCr8mst8jzyuI9pcAgHgPhm_2KwSdUStoyGyMKK-hdrCnGkzp4Ym9Oqzq-FjQAERDS-3wwoJ0gbgHNajxPPPXFvyw7-PJP8eQnOfIvbA4gj7hbjzP3XHIuabRMcQHcu0U8WEKh-wtKTiRrVJc');
+                "
+              ></div>
+              <div class="flex flex-1 flex-col justify-between py-1">
+                <div>
+                  <div class="flex justify-between items-start">
+                    <p
+                      class="text-slate-900 dark:text-white text-lg font-bold leading-tight"
+                    >
+                      El Paso Heat
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-1 mt-1">
+                    <span
+                      class="material-symbols-outlined text-red-500 text-[14px]"
+                      >warning</span
+                    >
+                    <p
+                      class="text-red-500 text-xs font-bold uppercase tracking-wide"
+                    >
+                      Very Hot
+                    </p>
+                  </div>
+                  <p
+                    class="text-slate-500 dark:text-[#baab9c] text-sm font-normal leading-snug mt-1 line-clamp-2"
+                  >
+                    Chorizo, jalapeños, spicy marinara, pepper jack cheese.
+                  </p>
+                </div>
+              </div>
+              <div class="pl-4">
+                <span class="text-lg font-bold text-slate-900 dark:text-white"
+                  >$15.00</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-4" id="section-2">
+          <div class="flex items-center justify-between px-4 pb-4 pt-2">
+            <h2
+              class="text-slate-900 dark:text-white tracking-tight text-2xl font-bold leading-tight flex items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-primary"
+                >kebab_dining</span
+              >
+              Spicy Desert Sides
+            </h2>
+          </div>
+          <div
+            class="group mx-4 mb-4 overflow-hidden rounded-xl bg-white dark:bg-[#2c2219] shadow-sm border border-gray-100 dark:border-white/5"
+          >
+            <div class="flex gap-4 p-3 items-center">
+              <div
+                class="bg-center bg-no-repeat bg-cover rounded-lg size-[88px] shrink-0 shadow-inner"
+                data-alt="Crispy curly fries"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCgvNh0AiVDwH37KrdIJTk0aak1_fUKYU5_UpxwP8-u42-HAToc5VqQUfZqN4-8SRQ1H8QX9gXYgxoUUdQDUUgIPe5S8S6pC-DeRedjRC5-g3wtpXBNi0bIOj7v5KhNAct7KJIrLa2Wz-RtfQokvwJpgCBs3teLxtAoHsLqtGbAHLNUBZ9RApUnt2Gi5MT7epls5c3LkEx8_cprIBjXyKnL3OPL527tcrEFzqWh-gzKvxkMgLZUJOKW3cwgb6VxPW_Knq5roTxAe3o');
+                "
+              ></div>
+              <div class="flex flex-1 flex-col justify-between py-1">
+                <div>
+                  <p
+                    class="text-slate-900 dark:text-white text-lg font-bold leading-tight"
+                  >
+                    Cactus Curly Fries
+                  </p>
+                  <p
+                    class="text-slate-500 dark:text-[#baab9c] text-sm font-normal leading-snug mt-2 line-clamp-2"
+                  >
+                    Seasoned curly fries dusted with our secret desert spice
+                    blend.
+                  </p>
+                </div>
+              </div>
+              <div class="pl-4">
+                <span class="text-lg font-bold text-slate-900 dark:text-white"
+                  >$6.50</span
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="group mx-4 mb-4 overflow-hidden rounded-xl bg-white dark:bg-[#2c2219] shadow-sm border border-gray-100 dark:border-white/5"
+          >
+            <div class="flex gap-4 p-3 items-center">
+              <div
+                class="bg-center bg-no-repeat bg-cover rounded-lg size-[88px] shrink-0 shadow-inner"
+                data-alt="Buffalo wings on a plate"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD4NzG7GKmvf9VLE96w8MD8dAy9tVVla1kvBaZGNxxCKdhtRcO3Ro2vGwIEc6viqVfYaaAGnmz13ZpxxZbvFx5mRNJfDUHPMELk2TQGwG8J1PRMJwfcHbD67qIzZZhAN9As0HM-luR3soVu6xfyveJGxyI4Qp1yM7x0CQn_GsQEyd58hmMCBvea1wlaJ-1C6OxV0Xnp3hOB9421En-KShURuWZ70wXFRhr6K0T5hn__sNOpJvm9-LgLZ4B79v44Z8V97wYNquYZP7s');
+                "
+              ></div>
+              <div class="flex flex-1 flex-col justify-between py-1">
+                <div>
+                  <p
+                    class="text-slate-900 dark:text-white text-lg font-bold leading-tight"
+                  >
+                    Buffalo Wings
+                  </p>
+                  <p
+                    class="text-slate-500 dark:text-[#baab9c] text-sm font-normal leading-snug mt-2 line-clamp-2"
+                  >
+                    Crispy wings tossed in classic buffalo sauce. Served with
+                    ranch.
+                  </p>
+                </div>
+              </div>
+              <div class="pl-4">
+                <span class="text-lg font-bold text-slate-900 dark:text-white"
+                  >$12.00</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-4 pb-4" id="section-3">
+          <div class="flex items-center justify-between px-4 pb-4 pt-2">
+            <h2
+              class="text-slate-900 dark:text-white tracking-tight text-2xl font-bold leading-tight flex items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-primary"
+                >local_bar</span
+              >
+              Saloon Drinks
+            </h2>
+          </div>
+          <div class="grid grid-cols-2 gap-4 px-4">
+            <div
+              class="flex flex-col overflow-hidden rounded-xl bg-white dark:bg-[#2c2219] shadow-sm border border-gray-100 dark:border-white/5 p-3"
+            >
+              <div
+                class="bg-center bg-no-repeat bg-cover rounded-lg aspect-square w-full mb-3 shadow-inner"
+                data-alt="Root Beer in a glass"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCDHonqPfxPBchiEcPcPpQPXvqw9ya4HaKwWQgruuDIiG_uRjDSOJEyIezpwa86RKz0nrnCtq6nUF-AQT_F7jFY6wKij6hi6RheyMypwjirqZRod3FlRGTkqwiq6rSdnj0CyDwp0L0uDu57euZaC9xzHRkFeiXXNTmQAaQboMWTvL-e53okWrFxNvlEvPDeVfwqg88xNCUuoikqgfUzslRfKSvSC3WSiuW7c20BcYVidJTcsx0uw5uN0b83vbTpixLSrDwkk-ETF0');
+                "
+              ></div>
+              <p
+                class="text-slate-900 dark:text-white text-base font-bold leading-tight"
+              >
+                Texas Root Beer
+              </p>
+              <p class="text-slate-500 dark:text-[#baab9c] text-xs mt-1 mb-3">
+                House made.
+              </p>
+              <div class="mt-auto flex items-end justify-between">
+                <span class="text-base font-bold text-slate-900 dark:text-white"
+                  >$3.50</span
+                >
+              </div>
+            </div>
+            <div
+              class="flex flex-col overflow-hidden rounded-xl bg-white dark:bg-[#2c2219] shadow-sm border border-gray-100 dark:border-white/5 p-3"
+            >
+              <div
+                class="bg-center bg-no-repeat bg-cover rounded-lg aspect-square w-full mb-3 shadow-inner"
+                data-alt="Iced Tea with lemon"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA7NxQorEDcE8r9bbfwsSETleV5gXkxVCRtPBW-U-7kwX6aKIcWhuTTsjusSkehi1_87kbuhtfVAOOiLyBYWirL86zTk_xQTtxX_8XwBu12ih7Zurd_u6CzWm8M2rrn4kotVPNQrIYwrztJ2ahojLo6k4FwcL3FW56pNSuTVM03_lovGdyG-dh_NGyxnmeaFx6JfMBWUDPBFcSsE9IBrhHdaEmu4lWZoZ19Of5-EhkPFqjDHfdXzCNkveapjy2z_MkWVtABGDojUho');
+                "
+              ></div>
+              <p
+                class="text-slate-900 dark:text-white text-base font-bold leading-tight"
+              >
+                Sweet Iced Tea
+              </p>
+              <p class="text-slate-500 dark:text-[#baab9c] text-xs mt-1 mb-3">
+                Lemon slice included.
+              </p>
+              <div class="mt-auto flex items-end justify-between">
+                <span class="text-base font-bold text-slate-900 dark:text-white"
+                  >$3.00</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
